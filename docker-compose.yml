@@ -1,0 +1,27 @@
+version: "3.7"
+services:
+  pythonapp:
+    build: 
+      dockerfile: server/Dockerfile
+      context: .
+    ports:
+      - 80:5000
+    volumes: 
+      - ${PWD}/server:/app
+    restart: unless-stopped
+    networks: 
+      - prod
+  reactapp:
+    build:
+      dockerfile: client/my-app/Dockerfile
+      context: .
+    ports:
+      - 3000:3000
+    networks: 
+      - prod
+
+
+networks:
+  prod:
+    external:
+      name: prod
