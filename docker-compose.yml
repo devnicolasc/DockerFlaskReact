@@ -1,24 +1,32 @@
 version: "3.7"
 services:
-  pythonapp:
+  server:
     build: 
       dockerfile: server/Dockerfile
       context: .
     ports:
-      - 80:5000
+      - "5000:5000"
     volumes: 
-      - ${PWD}/server:/app
+      - ./server:/app
+    environment: 
+      FLASK_ENV: development
     restart: unless-stopped
     networks: 
       - prod
-  reactapp:
-    build:
+  web:
+    build: 
       dockerfile: client/my-app/Dockerfile
       context: .
     ports:
-      - 3000:3000
+      - "3000:3000"
+    environment: 
+      DANGEROUSLY_DISABLE_HOST_CHECK: "true"
+    volumes:
+      - ./client/my-app:/user/src/app
     networks: 
       - prod
+    depends_on: 
+      - server
 
 
 networks:
