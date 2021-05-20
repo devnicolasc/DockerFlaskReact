@@ -1,0 +1,3 @@
+[submodule "my-app"]
+	path = my-app
+	url = ./client/my-app
