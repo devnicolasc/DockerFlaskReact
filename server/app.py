@@ -4,9 +4,21 @@ app = Flask(__name__)
 
 @app.route('/api', methods=['GET'])
 def index():
-    return {
-        "test": "result1",
-        "test2": "result2"
+    return {"r": [{
+       "col1": 'Hello',
+       "col2": 'World',
+     },
+     {
+       "col1": 'react-table',
+       "col2": 'rocks',
+     },
+     {
+       "col1": 'whatever',
+       "col2": 'you want',
+     },
+
+
+    ]
     }
 
 
