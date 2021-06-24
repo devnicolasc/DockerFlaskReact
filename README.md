@@ -11,3 +11,9 @@ cd my-app
 touch Dockerfile
  cd client && npm install react-table --save
 ```
+
+cd client
+rm -fr /client/my-app
+npx create-react-app my-app # create react app name my-app
+
+
