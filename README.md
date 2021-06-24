@@ -22,10 +22,13 @@ docker-compose build && docker-compose up -d
 
 # running modes 
 change /client/my-app/package.json *proxy to:
+
   develpment mode:
     "http://localhost:5000"
+    
   production mode:
     "http://server:5000"
+  
 
 
 
