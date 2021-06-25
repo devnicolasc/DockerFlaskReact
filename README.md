@@ -10,6 +10,8 @@ npx create-react-app my-app # create react app name my-app
 cd my-app
 touch Dockerfile
  cd client && npm install react-table --save
+ npm install --save google-maps-react
+
 ```-->
 
 clone repository
@@ -37,6 +39,5 @@ python server/app.py
   production mode:
     "http://server:5000"
   
-
 
 
