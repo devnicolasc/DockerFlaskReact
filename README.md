@@ -11,6 +11,7 @@ cd my-app
 touch Dockerfile
  cd client && npm install react-table --save
  npm install --save google-maps-react
+ npm install react-redux
 
 ```-->
 
