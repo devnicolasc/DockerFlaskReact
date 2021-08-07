@@ -19,7 +19,8 @@ clone repository
 ```
 cd client/my-app
 npm install
-cd ...
+cd ../..
+docker network create prod
 docker-compose build && docker-compose up -d
 ```
 
